@@ -1,6 +1,8 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material'
+import { useState } from 'react'
 import React from 'react'
 import styled from "styled-components"
+import { sliderItems } from '../data'
 
 
 const Container = styled.div`
@@ -8,6 +10,8 @@ const Container = styled.div`
     height:100vh;
     display: flex;
     position: relative;
+    overflow: hidden;
+    
 `
 const Arrow = styled.div`
     width:50px;
@@ -24,15 +28,20 @@ const Arrow = styled.div`
     cursor:pointer;
     opacity:0.5;
     margin: auto;
+    z-index: 2;
 `
 const Wrapper= styled.div`
-    height:100%
+    height:100%;
+    display: flex;
+    transform: translateX(${props=>props.slideIndex * -100}vw);
+    transition: all 0.5s;
 `
 const Slide =  styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
+    background-color: #${props=>props.bg};
 `
 const FotoContainer =  styled.div`
     height: 100%;
@@ -40,7 +49,7 @@ const FotoContainer =  styled.div`
 `
 const Foto =  styled.img`
     height: 80%;
-    padding: 50px;
+    padding: 50px; 
 `
 const InfoContainer =  styled.div`
 `
@@ -49,29 +58,45 @@ const Title = styled.h1`
 `
 const Desc = styled.p`
     margin: 50px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
 `
 const Button = styled.button`
-    
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
 `
 const Slider = () => {
+    const [slideIndex,setSlideIndex]=useState()
+    const alClickear = (direccion) =>{
+        if(direccion==="izq"){
+            setSlideIndex(slideIndex>0 ? slideIndex -1 : 2)
+        } else {
+            setSlideIndex(slideIndex < 2 ? slideIndex +1 : 0)
+        }
+    };
   return (
     <Container>
-        <Arrow direccion="izq">
+        <Arrow direccion="izq" onClick={()=>alClickear('izq')}>
             <ArrowLeftOutlined></ArrowLeftOutlined>
         </Arrow>
-        <Wrapper>
-        <Slide> 
-            <FotoContainer>
-            <Foto src='https://www.hobbyconsolas.com/noticias/warhammer-40000-space-marine-2-no-planes-games-workshop-2022-994097'/>
-            </FotoContainer>
-            <InfoContainer>
-                <Title>SPACE MARINES</Title>
-                <Desc>Explora las unidades para que puedas construir tu propio ejército de Space Marines</Desc>
-                <Button>Entrar</Button>
-            </InfoContainer>
+        <Wrapper slideIndex={slideIndex}>
+            {sliderItems.map((item) =>(
+            <Slide bg={item.bg}> 
+                <FotoContainer>
+                    <Foto src={item.img}/>
+                </FotoContainer>
+                <InfoContainer>
+                    <Title>{item.title}</Title>
+                    <Desc>{item.desc    }</Desc>
+                    <Button>Entrar</Button>
+                </InfoContainer>
             </Slide>
+        ))};    
         </Wrapper>
-        <Arrow direccion="der">
+          <Arrow direccion="der" onClick={() => alClickear('der')}>
             <ArrowRightOutlined></ArrowRightOutlined>
         </Arrow>
     </Container>
