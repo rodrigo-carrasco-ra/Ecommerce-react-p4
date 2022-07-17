@@ -65,11 +65,11 @@ export const indexminis = [
     },
     {
         id:6,
-        img:"https://www.games-workshop.com/resources/catalog/product/920x950/99120106031_CarnifexBrood01.jpg"
+        img:"https://www.games-workshop.com/resources/catalog/product/920x950/99120106061_TYRTermagantsLead.jpg"
     },
     {
         id:7,
-        img:"https://www.games-workshop.com/resources/catalog/product/920x950/99120112041_DRUIncubi01.jpg"
+        img:"https://www.games-workshop.com/resources/catalog/product/920x950/99120112007_KabaliteWarriorsNEW01.jpg"
     },
     {
         id:8,
