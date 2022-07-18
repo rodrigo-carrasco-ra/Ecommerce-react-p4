@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "nombre": "Codex Space Marines",
+    "stock": "20",
+    "precio": "43990",
+    "url": "codex-space-marines",
+    "img": "codex-space-marines.jpg",
+    "fecha": "2022-07-18"
+  },
+  {
+    "id": "2",
+    "nombre": "Patrulla de Combate: Marines Espaciales",
+    "stock": "8",
+    "precio": "109990",
+    "url": "patrulla-space-marines",
+    "img": "patrulla-space-marines.jpg",
+    "fecha": "2022-07-18"
+  },
+  {
+    "id": "3",
+    "nombre": "Capitán en armadura Gravis",
+    "stock": "45",
+    "precio": "31990",
+    "url": "capitan-armadura-gravis",
+    "img": "capitan-armadura-gravis.jpg",
+    "fecha": "2022-07-18"
+  },
+  {
+    "id": "4",
+    "nombre": "Capitán rifle bolter pesado artesanal",
+    "stock": "3",
+    "precio": "30990",
+    "url": "capitan-rifle-bolter-pesado-artesanal",
+    "img": "capitan-rifle-bolter-pesado-artesanal.jpg",
+    "fecha": "2022-07-18"
+  },
+  {
+    "id": "5",
+    "nombre": "Primaris Intercesores",
+    "stock": "16",
+    "precio": "49990",
+    "url": "primaris-intercesores",
+    "img": "primaris-intercesores.jpg",
+    "fecha": "2022-07-18"
+  },
+  {
+    "id": "6",
+    "nombre": "Escuadrón Táctico",
+    "stock": "21",
+    "precio": "29990",
+    "url": "escuadron-tactico",
+    "img": "escuadron-tactico.jpg",
+    "fecha": "2022-07-18"
+  }
+]
