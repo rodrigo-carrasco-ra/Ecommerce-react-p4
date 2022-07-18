@@ -4,10 +4,12 @@ import Carrito from './Carrito';
 import Home from './Home';
 import {CartProvider} from "react-use-cart"
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
+      <Navbar/>
       <CartProvider>
       <Home/>
       <Carrito/>

@@ -8,10 +8,10 @@ const ItemCard = (props) => {
               <div  class="card p-0 overflow-hidden h-100 shadow" >
                   <img src={props.img} class='card-img-top img-fluid' alt='' />
                   <div class="card-body text-center">
-                      <h5 class="card-title">{props.title}</h5>
+                      <h4 class="card-title">{props.title}</h4>
                       <p class="card-text">${props.price}</p>
                       <p class="card-text">Stock disponible: {props.quantity}</p>
-                      <p class="card-text">Ultima actualizacion: {props.date}</p>
+                      <p class="card-text">{props.desc}</p>
                       <button class="btn btn-success" onClick={() =>addItem(props.item)}>Agregar al carrito</button>
                   </div>
           </div>

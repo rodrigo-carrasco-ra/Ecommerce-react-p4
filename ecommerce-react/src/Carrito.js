@@ -12,7 +12,7 @@ const Carrito = () => {
         removeItem,
         emptyCart
         } = useCart();
-        if(isEmpty) return <h1 className='text-center'>Carrito Vacio</h1>
+    if (isEmpty) return <h1 className='text-center' style={{ paddingBottom: '5rem',paddingTop:'5rem' }}>Carrito Vacio</h1>
     return (
         <section className='py-4 container'>
             <div className='row justify-content-center'>

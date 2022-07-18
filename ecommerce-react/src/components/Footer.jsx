@@ -3,12 +3,15 @@ import styled from "styled-components"
 
 const Container = styled.div`
     display: flex;
+    background-color: #27393b;
+
 `
 const Izquierda = styled.div`
     flex:1;
     display:flex;
     flex-direction: column;
     padding: 20px;
+    color: white;
 `
 const Logo = styled.h1`
 `
@@ -36,6 +39,7 @@ const Centro = styled.div`
 `
 const Title = styled.h3`
     margin-bottom: 30px;
+    color: white;
 `
 const List = styled.ul`
   margin: 0;
@@ -43,6 +47,7 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  color: white;
 `;
 
 const ListItem = styled.li`
@@ -55,6 +60,7 @@ const ListItem = styled.li`
 const Derecha = styled.div`
     flex:1;
     padding:20px;
+    color: white;
 ` 
 const ContactItem = styled.div`
   margin-bottom: 20px;
