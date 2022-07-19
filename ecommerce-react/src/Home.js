@@ -1,6 +1,6 @@
 import React from 'react'
 import ItemCard from './ItemCard' 
-import data from './data'
+import marines from './marines'
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
         <h1 className='text-center mt-3' style={{paddingTop:'10rem'}}> Productos Disponibles</h1>
             <section className='py-4 container'>
             <div className='row justify-content-center'>
-                {data.productData.map((item,index)=>{
+                {marines.map((item,index)=>{
                     return(
                         <ItemCard 
                         img={item.img} 
